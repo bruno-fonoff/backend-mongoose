@@ -68,7 +68,7 @@ router.patch("/edit/:id", async (req, res) => {
     console.error(error);
     return res
       .status(500)
-      .json({ message: "Check out the changed information.", error });
+      .json({ message: "Check out the changed information", error });
   }
 });
 
