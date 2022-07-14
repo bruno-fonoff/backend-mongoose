@@ -8,6 +8,9 @@ dbConnect();
 
 app.use(express.json());
 
+const marketRouter = require("./routes/market.router");
+app.use("/market", marketRouter);
+
 const fruitRouter = require("./routes/fruit.router");
 app.use("/fruit", fruitRouter);
 
