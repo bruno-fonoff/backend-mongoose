@@ -53,7 +53,7 @@ router.patch("/edit-market/:id", async (req, res) => {
     const editMarket = await MarketModel.findOneAndUpdate(
       { _id: id },
       { ...req.body },
-      { new: true }
+      { new: true, runValidators: true }
     );
     return res
       .status(200)
